@@ -1,6 +1,10 @@
-class Igor : Programmer
+```csharp
+public class Igor : Programmer
 {
-    public override string[] Languages =>
+    Name = "Igor";
+    Level = "🥔 Potato Programmer";
+
+    Languages =>
     [
         "C#",
         "C++",
@@ -9,31 +13,21 @@ class Igor : Programmer
         "Python"
     ];
 
-    public override string[] Engines =>
+    Engines =>
     [
         "Unity",
         "Unreal Engine 5"
     ];
 
-    public override string[] Tools =>
+    Tools =>
     [
         "Blender",
         "Cascadeur",
         "Git"
     ];
 
-    public override bool HasCoffee => true;
-
-    public override void DailyRoutine()
-    {
-        while (HasCoffee)
-        {
-            Code();
-            CreateGame();
-            FixBugs();
-            LearnSomethingNew();
-        }
-
-        throw new CoffeeNotFoundException();
-    }
+    Status => HasCoffee
+        ? "Building games..."
+        : "☕ CoffeeNotFoundException";
 }
+```
